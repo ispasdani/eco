@@ -1,0 +1,230 @@
+.whyUsSection {
+  width: 100vw;
+  min-height: 1000px;
+  padding-top: 10vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .whyFirstEntry {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--main-grey);
+
+    .whyLeft {
+      width: 300px;
+      padding: 50px 20px;
+      height: 500px;
+
+      p {
+        font-size: 60px;
+      }
+    }
+
+    .whyRight {
+      flex: 1;
+      height: 500px;
+      padding: 50px 20px;
+      z-index: 1;
+
+      h2:nth-child(1) {
+        font-size: 90px;
+      }
+
+      h2 {
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 95px;
+      }
+    }
+  }
+
+  .whySecondEntry {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--main-grey);
+
+    .whyLeft {
+      width: 300px;
+      padding: 50px 20px;
+      height: 500px;
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .whyRight {
+      flex: 1;
+      height: 500px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 50px 20px;
+
+      .whyRightLeft {
+        width: auto;
+
+        p:nth-child(1) {
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 50px;
+          margin-left: 20px;
+          margin-right: 40px;
+          font-weight: 500;
+
+          line-height: 60px;
+        }
+      }
+
+      .whyRightRight {
+        margin-left: 40px;
+        max-width: 550px;
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .whyThirdEntry {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--main-grey);
+
+    .whyLeft {
+      width: 300px;
+      padding: 50px 20px;
+      height: 500px;
+
+      p {
+        font-size: 22px;
+      }
+    }
+
+    .whyRight {
+      flex: 1;
+      height: 500px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 50px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .whyUsSection {
+    .whyFirstEntry {
+      .whyLeft {
+        width: 240px;
+      }
+
+      .whyRight {
+        h2:nth-child(1) {
+          font-size: 80px;
+        }
+
+        h2 {
+          font-size: 60px;
+          font-weight: 600;
+          line-height: 95px;
+        }
+      }
+    }
+    .whySecondEntry {
+      height: 650px;
+      .whyLeft {
+        width: 240px;
+        height: 650px;
+      }
+      .whyRight {
+        height: 650px;
+      }
+    }
+    .whyThirdEntry {
+      height: 800px;
+
+      .whyLeft {
+        width: 240px;
+        height: 800px;
+      }
+
+      .whyRight {
+        align-items: center;
+        flex-direction: column;
+        height: 800px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .whyUsSection {
+    .whyFirstEntry {
+      flex-direction: column;
+      height: 650px;
+
+      .whyLeft {
+        width: 100%;
+        height: 200px;
+      }
+
+      .whyRight {
+        height: 450px;
+        width: 100%;
+      }
+    }
+
+    .whySecondEntry {
+      flex-direction: column;
+      height: auto;
+
+      .whyLeft {
+        width: 100%;
+        height: 130px;
+      }
+
+      .whyRight {
+        height: 850px;
+        width: 100%;
+        flex-direction: column;
+        padding: 30px 20px;
+
+        .whyRightRight {
+          margin: 15px 0px;
+          width: 100%;
+        }
+      }
+    }
+
+    .whyThirdEntry {
+      flex-direction: column;
+      height: 1100px;
+
+      .whyLeft {
+        height: 130px;
+        width: 100%;
+      }
+
+      .whyRight {
+        width: 100%;
+        padding: 30px 20px;
+      }
+    }
+  }
+}

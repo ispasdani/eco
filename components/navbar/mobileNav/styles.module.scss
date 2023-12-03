@@ -1,0 +1,120 @@
+.mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .mobileNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 2;
+
+    .hamburgerX {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      cursor: pointer;
+      transition: 0.5s all ease;
+
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        width: 28px;
+        height: 3px;
+        background-color: var(--main-white);
+        border-radius: 10px;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        position: absolute;
+        width: 28px;
+        height: 3px;
+        background-color: var(--main-white);
+        border-radius: 10px;
+      }
+    }
+
+    .hamburger {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      cursor: pointer;
+      transition: 0.5s all ease;
+
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--main-white);
+        margin: 2px 0px;
+        border-radius: 10px;
+        transition: 0.2s all ease-in-out;
+      }
+    }
+
+    .hamburger:hover span:nth-child(1) {
+      width: 14px;
+    }
+
+    .hamburger:hover span:nth-child(2) {
+      width: 21px;
+    }
+
+    .mobileNavContent {
+      position: absolute;
+      top: 7vh;
+      right: 0;
+      width: 250px;
+      height: 400px;
+      padding: 20px;
+      background-color: var(--main-white);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding-top: 25px;
+
+      .navLink {
+        font-size: 16px;
+        margin: 5px 5px;
+        padding: 5px 0px;
+        color: var(--main-black);
+        white-space: nowrap;
+        transition: 0.2s all ease-in-out;
+        position: relative;
+
+        &.example2::after {
+          content: "";
+          position: absolute;
+          height: 25%;
+          bottom: 0;
+          left: -0.2rem;
+          right: calc(100% + 0.2rem);
+          background-color: var(--main-green);
+          transition: 300ms ease-in-out;
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        &.example2:hover::after {
+          right: -0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 0;
+  pointer-events: none;
+
+  .line {
+    width: 1px;
+    min-height: 100%;
+    background-color: var(--main-grey);
+    position: relative;
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0; /* Start and end state: fully transparent */
+  }
+  50% {
+    opacity: 1; /* Middle state: fully opaque */
+  }
+}

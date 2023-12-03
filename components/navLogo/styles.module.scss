@@ -1,0 +1,12 @@
+.navLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 10px;
+    color: var(--main-green);
+  }
+}
