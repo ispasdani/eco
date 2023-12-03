@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/sections/LandingSection/styles.module.scss";
+import styles from "@/sections/landingSection/styles.module.scss";
 import Image from "next/image";
 import { landingTexts } from "@/constants/landingTexts";
 
