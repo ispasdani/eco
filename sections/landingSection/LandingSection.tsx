@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "@/sections/landingSection/styles.module.scss";
 import Image from "next/image";
