@@ -1,0 +1,34 @@
+.whatWeDoSection {
+  height: 1000px;
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .whatWeDoLeft {
+    height: 1000px;
+    width: 300px;
+    background-color: lightgreen;
+    padding: 50px 20px;
+
+    p {
+      font-size: 60px;
+    }
+  }
+
+  .whatWeDoRight {
+    height: 1000px;
+    flex: 1;
+    padding: 50px 20px;
+    background-color: lightcyan;
+
+    .whatWeDoRightTop {
+      h2 {
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 95px;
+      }
+    }
+  }
+}

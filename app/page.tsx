@@ -1,6 +1,7 @@
 import TextOnScroll from "@/components/textOnScroll/TextOnScroll";
 import LandingSection from "@/sections/landingSection/LandingSection";
 import StorySection from "@/sections/story/StorySection";
+import WhatWeDo from "@/sections/whatWeDo/WhatWeDo";
 import WhyUsSection from "@/sections/whyUsSection/WhyUsSection";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <TextOnScroll />
       <WhyUsSection />
       <StorySection />
+      <WhatWeDo />
     </div>
   );
 }

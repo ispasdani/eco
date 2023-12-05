@@ -5,12 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid var(--main-grey);
   flex-direction: column;
 
   .storyBanner {
     width: 100%;
     height: 500px;
-    background-color: lightcoral;
     background-image: url("/images/mountainsLine.jpg");
     background-position: center;
     background-size: cover;
@@ -19,7 +19,6 @@
   .storyContent {
     width: 100%;
     height: 700px;
-    background-color: lightgreen;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,11 +38,9 @@
       flex: 1;
       height: 700px;
       padding: 50px 20px;
-      background-color: red;
 
       .storyContentRightTop {
         height: 200px;
-        background-color: green;
 
         h2 {
           font-size: 70px;
@@ -55,7 +52,6 @@
       .storyContentRightBottom {
         height: 400px;
         width: 450px;
-        background-color: lightblue;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -63,6 +59,32 @@
 
         P {
           margin: 20px 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .storySection {
+    height: 1600px;
+
+    .storyContent {
+      flex-direction: column;
+      height: 1000px;
+
+      .storyContentLeft {
+        width: 100%;
+        height: 130px;
+        padding: 20px;
+      }
+
+      .storyContentRight {
+        width: 100%;
+        padding: 0px 20px;
+
+        .storyContentRightBottom {
+          width: 340px;
         }
       }
     }

@@ -11,7 +11,7 @@ function StorySection() {
         </div>
         <div className={styles.storyContentRight}>
           <div className={styles.storyContentRightTop}>
-            <h2>Our story</h2>
+            <h2>Our story.</h2>
           </div>
           <div className={styles.storyContentRightBottom}>
             <p>

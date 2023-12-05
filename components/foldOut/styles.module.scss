@@ -1,0 +1,49 @@
+.foldOut {
+  width: 500px;
+  height: auto;
+  border-bottom: 1px solid var(--main-grey);
+  border-top: 1px solid var(--main-grey);
+  cursor: pointer;
+
+  .foldOutHeader {
+    width: 100%;
+    height: 80px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .expandArrow {
+      width: 40px;
+    }
+  }
+
+  .foldOutContent {
+    width: 100%;
+    background-color: aquamarine;
+
+    .contentElement {
+      width: 100%;
+      height: 70px;
+      background-color: red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 5px;
+      position: relative;
+
+      .contentElementImg {
+        width: 30px;
+      }
+
+      .imageReveal {
+        position: absolute;
+        right: -350px;
+        top: 0;
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+}
