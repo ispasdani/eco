@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/sections/whatWeDo/styles.module.scss";
 import FoldOut from "@/components/foldOut/FoldOut";
+import { whatWeCollectArr, whatWeRecycleArr } from "@/constants/whatWeDoTexts";
 
 function WhatWeDo() {
   return (
@@ -13,7 +14,14 @@ function WhatWeDo() {
           <h2>What we do.</h2>
         </div>
         <div className={styles.whatWeDoRightBottom}>
-          <FoldOut />
+          <FoldOut
+            arrElements={whatWeCollectArr}
+            foldOutTitle="What we collect"
+          />
+          <FoldOut
+            arrElements={whatWeRecycleArr}
+            foldOutTitle="What we recycle"
+          />
         </div>
       </div>
     </div>

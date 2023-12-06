@@ -6,6 +6,21 @@ export const whatWeDoTexts = {
   },
 };
 
+export const whatWeCollectArr = [
+  "Ferrous",
+  "Non-Ferrous",
+  "Metal Scrape",
+  "Dangerous Waste",
+  "Glass",
+  "Plastic Waste",
+  "PET",
+  "Electronics",
+  "Cardboard",
+  "Paper",
+];
+
+export const whatWeRecycleArr = ["Non-Ferrous", "All kinds of Plastic"];
+
 export const whatWeCollect = {
   RO: [
     {

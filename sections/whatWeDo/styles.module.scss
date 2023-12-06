@@ -1,34 +1,53 @@
 .whatWeDoSection {
-  height: 1000px;
+  min-height: 700px;
   width: 100%;
-  background-color: lightblue;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  z-index: 10;
 
   .whatWeDoLeft {
-    height: 1000px;
+    height: 700px;
     width: 300px;
-    background-color: lightgreen;
     padding: 50px 20px;
 
     p {
       font-size: 60px;
+      z-index: 10;
     }
   }
 
   .whatWeDoRight {
-    height: 1000px;
+    min-height: 700px;
     flex: 1;
     padding: 50px 20px;
-    background-color: lightcyan;
 
     .whatWeDoRightTop {
       h2 {
         font-size: 70px;
         font-weight: 600;
         line-height: 95px;
+        margin-bottom: 50px;
+        z-index: 9;
       }
+    }
+
+    .whatWeDoRightBottom {
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .whatWeDoSection {
+    flex-direction: column;
+
+    .whatWeDoLeft {
+      width: 100%;
+      height: 150px;
+    }
+
+    .whatWeDoRight {
+      width: 100%;
     }
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import styles from "@/components/foldOut/styles.module.scss";
 
@@ -11,28 +11,52 @@ type FoldOutProps = {
   borderTop?: string;
   borderBottom?: string;
   foldOutTitle?: string;
-  arrElements?: [];
+  arrElements?: string[];
+  collectText?: string;
 };
 
 const FoldOut = ({
   foldOutTitle,
+  collectText,
   width,
   height,
   borderBottom,
   borderTop,
   index,
+  arrElements,
 }: FoldOutProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredValue, setHoveredValue] = useState("");
+  const [isHovered, setIsHovered] = useState(false);
+  const cursorPositionRef = useRef({ x: 0, y: 0 });
 
-  const controls = useAnimation();
-
-  const handleHover = () => {
-    controls.start({ opacity: 1 });
+  const handleMouseEnter = (text: string) => {
+    setIsHovered(true);
+    setHoveredValue(text);
   };
 
-  const handleHoverEnd = () => {
-    controls.start({ opacity: 0 });
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setHoveredValue("");
   };
+
+  const handleMouseMove = (event: any) => {
+    cursorPositionRef.current = { x: event.clientX, y: event.clientY };
+  };
+
+  useEffect(() => {
+    const handleMouseMoveDebounced = (event: any) => {
+      if (isHovered) {
+        cursorPositionRef.current = { x: event.clientX, y: event.clientY };
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMoveDebounced);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMoveDebounced);
+    };
+  }, [isHovered]);
 
   return (
     <motion.div className={styles.foldOut}>
@@ -42,7 +66,7 @@ const FoldOut = ({
           className={styles.foldOutHeader}
           onClick={() => setIsOpen(!isOpen)}
         >
-          What we collect
+          <p>{foldOutTitle}</p>
           <motion.img
             src="/icons/expandArrow.svg"
             alt="Expanding row icon"
@@ -54,7 +78,7 @@ const FoldOut = ({
                 duration: 0.6,
               },
             }}
-          ></motion.img>
+          />
         </motion.div>
 
         {isOpen && (
@@ -63,7 +87,7 @@ const FoldOut = ({
             initial={{ opacity: 0, height: 0 }}
             animate={{
               opacity: 1,
-              height: "300px",
+              height: "auto",
               transition: {
                 duration: 0.6,
               },
@@ -71,23 +95,38 @@ const FoldOut = ({
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <div
-              className={styles.contentElement}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleHoverEnd}
-            >
-              Test
+            {hoveredValue.length > 0 && (
               <motion.img
-                src="/icons/imgIcon.svg"
-                className={styles.contentElementImg}
-              />
-              <motion.img
-                src="/images/landingImg.jpg"
+                src={`/images/${hoveredValue.toLowerCase()}.jpg`}
                 className={styles.imageReveal}
-                animate={controls}
-                transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+                style={{
+                  position: "fixed",
+                  top: cursorPositionRef.current.y - 50, // Adjust the distance from the cursor
+                  left: cursorPositionRef.current.x,
+                }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.04, 0.62, 0.23, 0.98],
+                }}
               />
-            </div>
+            )}
+
+            {arrElements?.map((text, index) => (
+              <motion.div
+                key={index * 196}
+                className={styles.contentElement}
+                style={{ position: isHovered ? "relative" : "unset" }}
+                onMouseEnter={() => handleMouseEnter(text)}
+                onMouseLeave={handleMouseLeave}
+                onMouseMove={(e) => handleMouseMove(e)}
+              >
+                {text}
+                <motion.img
+                  src="/icons/imgIcon.svg"
+                  className={styles.contentElementImg}
+                />
+              </motion.div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
