@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { motion } from "framer-motion";
 import Lines from "@/components/backgroundLines/Lines";
+import Footer from "@/components/footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Lines />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

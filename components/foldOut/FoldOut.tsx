@@ -37,7 +37,6 @@ const FoldOut = ({
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    setHoveredValue("");
   };
 
   const handleMouseMove = (event: any) => {
@@ -47,7 +46,10 @@ const FoldOut = ({
   useEffect(() => {
     const handleMouseMoveDebounced = (event: any) => {
       if (isHovered) {
-        cursorPositionRef.current = { x: event.clientX, y: event.clientY };
+        cursorPositionRef.current = {
+          x: event.clientX + 200,
+          y: event.clientY,
+        };
       }
     };
 
@@ -57,6 +59,8 @@ const FoldOut = ({
       document.removeEventListener("mousemove", handleMouseMoveDebounced);
     };
   }, [isHovered]);
+
+  console.log(hoveredValue.toLowerCase());
 
   return (
     <motion.div className={styles.foldOut}>
@@ -95,7 +99,7 @@ const FoldOut = ({
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            {hoveredValue.length > 0 && (
+            {hoveredValue.length > 0 && isHovered && (
               <motion.img
                 src={`/images/${hoveredValue.toLowerCase()}.jpg`}
                 className={styles.imageReveal}
