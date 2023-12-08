@@ -5,7 +5,7 @@ import FullCard from "@/components/fullCard/FullCard";
 
 function WhyUsSection() {
   return (
-    <div className={styles.whyUsSection}>
+    <div className={styles.whyUsSection} id="whyUs">
       <div className={styles.whyFirstEntry}>
         <div className={styles.whyLeft}>
           <p>{whyUsTexts.EN.whyUsLeftText}</p>
