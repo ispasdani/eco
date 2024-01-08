@@ -1,0 +1,45 @@
+.twoItemsSection {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--main-grey);
+
+  .leftSide {
+    width: 300px;
+    padding: 50px 20px;
+    height: 100%;
+
+    .leftSideTitle {
+      font-size: 60px;
+    }
+
+    .leftSideSmallTitle {
+      font-size: 22px;
+      white-space: wrap;
+      z-index: 1;
+    }
+  }
+
+  .rightSide {
+    flex: 1;
+    padding: 50px 20px;
+    height: 100%;
+
+    .rightSideTitle {
+      font-size: 70px;
+      font-weight: 600;
+      line-height: 95px;
+      margin-bottom: 70px;
+    }
+
+    .rightSideSmallTitle {
+      font-size: 22px;
+      font-weight: 600;
+      white-space: wrap;
+      z-index: 1;
+      margin-bottom: 70px;
+    }
+  }
+}

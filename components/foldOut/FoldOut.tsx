@@ -131,6 +131,8 @@ const FoldOut = ({
                 />
               </motion.div>
             ))}
+
+            {collectText && <motion.div>{collectText}</motion.div>}
           </motion.div>
         )}
       </AnimatePresence>

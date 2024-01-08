@@ -42,7 +42,7 @@ const DesktopNav = () => {
           {navTexts.EN.navLink2}
         </Link>
         <Link
-          href="our story"
+          href="about us"
           className={`${styles.navLink} ${styles.example2}`}
         >
           {navTexts.EN.navLink3}

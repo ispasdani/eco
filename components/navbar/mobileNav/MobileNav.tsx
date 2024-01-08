@@ -26,7 +26,7 @@ const MobileNav = () => {
           <a href="whyus" className={`${styles.navLink} ${styles.example2}`}>
             {navTexts.EN.navLink1}
           </a>
-          <Link href="story" className={`${styles.navLink} ${styles.example2}`}>
+          <Link href="about us" className={`${styles.navLink} ${styles.example2}`}>
             {navTexts.EN.navLink2}
           </Link>
           <Link

@@ -1,6 +1,7 @@
+import Banner from "@/components/banner/Banner";
 import TextOnScroll from "@/components/textOnScroll/TextOnScroll";
+import AboutUs from "@/sections/aboutus/AboutUs";
 import LandingSection from "@/sections/landingSection/LandingSection";
-import StorySection from "@/sections/story/StorySection";
 import WhatWeDo from "@/sections/whatWeDo/WhatWeDo";
 import WhyUsSection from "@/sections/whyUsSection/WhyUsSection";
 
@@ -10,7 +11,8 @@ export default function Home() {
       <LandingSection />
       <TextOnScroll />
       <WhyUsSection />
-      <StorySection />
+      <Banner />
+      <AboutUs />
       <WhatWeDo />
     </div>
   );

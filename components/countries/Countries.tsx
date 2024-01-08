@@ -66,7 +66,7 @@ const Countries = () => {
 
       {showHu && <p className={styles.showCountryName}>Hungary</p>}
       {showRo && <p className={styles.showCountryName}>Romania</p>}
-      {showMd && <p className={styles.showCountryName}>Moldova</p>}
+      {showMd && <p className={styles.showCountryName}>Republic of Moldova</p>}
     </div>
   );
 };
