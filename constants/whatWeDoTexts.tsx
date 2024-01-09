@@ -202,3 +202,32 @@ export const whatWeRecycle = {
     },
   ],
 };
+
+export const wasteCategories = {
+  RO: [
+    "Deseuri mase plastice",
+    "Deseuri lemn",
+    "Deseuri hartie-carton",
+    "Deseuri textile si pielarie",
+    "Deseuri metalice feroase",
+    "Deseuri metalice neferoase",
+    "Deseuri echipamente electrice si electronice",
+    "Deseuri sticla",
+    "Deseuri cauciuc",
+    "Acumulatori uzati",
+    "Deseuri periculoase",
+  ],
+  EN: [
+    "Plastic waste",
+    "Wood waste",
+    "Paper-cardboard waste",
+    "Textile and leather waste",
+    "Ferrous metal waste",
+    "Non-ferrous metal waste",
+    "Waste electrical and electronic equipment",
+    "Glass waste",
+    "Rubber waste",
+    "Used batteries",
+    "Hazardous waste",
+  ],
+};

@@ -1,0 +1,41 @@
+.wasteCategoriesContainer {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px 0px;
+
+  .wasteContainerTop {
+    width: 80%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .wasteCategoryBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      padding: 5px;
+      margin: 5px;
+      height: 70px;
+      background-color: var(--main-white);
+      cursor: pointer;
+      border-top: 1px solid var(--main-grey);
+      border-bottom: 1px solid var(--main-grey);
+    }
+
+    .wasteCategoryBtn:hover {
+      background-color: var(--light-grey);
+    }
+  }
+
+  .wasteContainerBottom {
+    width: 80%;
+    height: 500px;
+  }
+}
