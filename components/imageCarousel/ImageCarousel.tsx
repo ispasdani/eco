@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import styles from "@/components/imageCarousel/styles.module.scss";
+import Image from "next/image";
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -15,37 +17,44 @@ const ImageCarousel = ({ images }) => {
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: any) => {
     setCurrentIndex(index);
   };
 
   return (
-    <div className="carousel">
-      <img key={currentIndex} src={images[currentIndex]} />
-      <div className="slide_direction">
-        <div className="left" onClick={handlePrevious}>
+    <div className={styles.carousel}>
+      <Image
+        key={currentIndex}
+        src={images[currentIndex]}
+        className={styles.carouselImage}
+        width={400}
+        height={300}
+        alt="image shown based on waste category selected"
+      />
+      <div className={styles.slideDirection}>
+        <div className={styles.leftArrow} onClick={handlePrevious}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="20"
-            viewBox="0 96 960 960"
-            width="20"
+            height="64"
+            viewBox="0 -960 960 960"
+            width="64"
           >
-            <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
+            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
           </svg>
         </div>
-        <div className="right" onClick={handleNext}>
+        <div className={styles.rightArrow} onClick={handleNext}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="20"
-            viewBox="0 96 960 960"
-            width="20"
+            height="64"
+            viewBox="0 -960 960 960"
+            width="64"
           >
-            <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
           </svg>
         </div>
       </div>
       <div className="indicator">
-        {images.map((_, index) => (
+        {images.map((_: any, index: React.Key | null | undefined) => (
           <div
             key={index}
             className={`dot ${currentIndex === index ? "active" : ""}`}

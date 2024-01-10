@@ -25,8 +25,9 @@
       height: 70px;
       background-color: var(--main-white);
       cursor: pointer;
-      border-top: 1px solid var(--main-grey);
-      border-bottom: 1px solid var(--main-grey);
+      border: 1px solid var(--main-grey);
+      z-index: 5;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .wasteCategoryBtn:hover {
