@@ -46,7 +46,6 @@ const hazardouswaste = ["/images/.jpg"];
 
 const WasteCategories = () => {
   const [selectedWaste, setSelectedWaste] = useState("");
-  console.log(selectedWaste);
 
   return (
     <section className={styles.wasteCategoriesContainer}>
@@ -54,7 +53,7 @@ const WasteCategories = () => {
         {wasteCategories.EN.map((cat, index) => (
           <div
             key={index * 9321}
-            className={styles.wasteCategoryBtn}
+            className={`${styles.wasteCategoryBtn} ${styles.exampleTwo}`}
             onClick={(e) => {
               const target = e.target as HTMLElement;
               const transformedText = target.innerText
@@ -104,6 +103,9 @@ const WasteCategories = () => {
         )}
         {selectedWaste.length > 0 && selectedWaste === "hazardouswaste" && (
           <ImageCarousel images={hazardouswaste} />
+        )}
+        {selectedWaste.length === 0 && (
+          <p className={styles.selectAWasteMessage}>Select a waste category!</p>
         )}
       </div>
     </section>

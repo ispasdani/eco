@@ -4,7 +4,10 @@
   top: -10vh;
   z-index: 1;
   border: 1px solid black;
+  outline: 1px solid var(--main-black);
+  outline-offset: 5px;
   padding: 20px;
+  background-color: white;
 
   .videoPlayer {
     width: 100%;

@@ -23,20 +23,23 @@ const MobileNav = () => {
 
       {isOpen && (
         <div className={styles.mobileNavContent}>
-          <a href="whyus" className={`${styles.navLink} ${styles.example2}`}>
+          <a href="/#whyUs" className={`${styles.navLink} ${styles.example2}`}>
             {navTexts.EN.navLink1}
           </a>
-          <Link href="about us" className={`${styles.navLink} ${styles.example2}`}>
+          <Link
+            href="/#aboutUs"
+            className={`${styles.navLink} ${styles.example2}`}
+          >
             {navTexts.EN.navLink2}
           </Link>
           <Link
-            href="whatwedo"
+            href="/#whatWeDo"
             className={`${styles.navLink} ${styles.example2}`}
           >
             {navTexts.EN.navLink3}
           </Link>
           <Link
-            href="contact us"
+            href="/#contactUs"
             className={`${styles.navLink} ${styles.example2}`}
           >
             {navTexts.EN.navLink4}

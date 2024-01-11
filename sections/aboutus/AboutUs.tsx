@@ -8,7 +8,7 @@ import FoldOut from "@/components/foldOut/FoldOut";
 
 function AboutUs() {
   return (
-    <section className={styles.aboutUs}>
+    <section className={styles.aboutUs} id="aboutUs">
       <TwoItemsSection leftSideTitle="02." rightSideTitle="About us.">
         <Paragraph
           text="S.C. Ecoplast Hart S.R.L. is a company established in 2004 with extensive experience

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contactUs">
       <div className={styles.footerTop}>
         <h2>ECOPLAST HART</h2>
       </div>
