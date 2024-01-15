@@ -1,0 +1,31 @@
+.contactBubble {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 99;
+
+  .bubbleIcon {
+    width: 70px;
+    height: 70px;
+    fill: var(--main-green);
+    cursor: pointer;
+  }
+
+  .bubbleIcon:hover ~ .contactCloud {
+    position: fixed;
+    display: block;
+  }
+
+  .contactCloud {
+    position: fixed;
+    display: none;
+    bottom: 10%;
+    right: 10%;
+    margin-top: 70px;
+    width: 350px;
+    height: 220px;
+    background: var(--main-green);
+    // box-shadow: 5px 5px rgba(87, 136, 71, 0.4);
+    border-radius: 100px;
+  }
+}
