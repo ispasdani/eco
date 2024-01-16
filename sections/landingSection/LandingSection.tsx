@@ -4,6 +4,13 @@ import React from "react";
 import styles from "@/sections/landingSection/styles.module.scss";
 import Image from "next/image";
 import { landingTexts } from "@/constants/landingTexts";
+import ImageAutoSlider from "@/components/imageAutoSlider/ImageAutoSlider";
+
+const images = [
+  "/images/heroOne.jpg",
+  "/images/heroTwo.jpg",
+  "/images/heroThree.jpg",
+];
 
 function LandingSection() {
   return (
@@ -39,11 +46,12 @@ function LandingSection() {
           </p>
           <p className={styles.landingTexts}>{landingTexts.EN.landingTitle3}</p>
         </div>
-        <img
+        {/* <img
           src="/images/landingImg.jpg"
           alt="Landing Nature Image"
           className={styles.landingImg}
-        />
+        /> */}
+        <ImageAutoSlider images={images} />
       </div>
     </div>
   );

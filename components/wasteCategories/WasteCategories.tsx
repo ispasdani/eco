@@ -20,7 +20,7 @@ const papercardboardwaste = ["/images/carton.jpg", "/images/hartie.jpg"];
 
 const textileandleatherwaste = ["/images/piele.jpg"];
 
-const ferrousmetalwaste = ["/images/metalcferos.jpg"];
+const ferrousmetalwaste = ["/images/metalicferos.jpg"];
 
 const nonferrousmetalwaste = [
   "/images/aluminiu.jpg",
@@ -41,7 +41,7 @@ const wasteelectricalandelectronicequipment = [
 const glasswaste = ["/images/glass.jpg"];
 
 const rubberwaste = ["/images/rubber.jpg"];
-const usedbatteries = ["/images/.jpg"];
+const usedbatteries = ["/images/usedBatteries.jpg"];
 const hazardouswaste = ["/images/.jpg"];
 
 const WasteCategories = () => {

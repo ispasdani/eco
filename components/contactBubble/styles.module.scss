@@ -11,21 +11,39 @@
     cursor: pointer;
   }
 
-  .bubbleIcon:hover ~ .contactCloud {
-    position: fixed;
-    display: block;
-  }
-
   .contactCloud {
     position: fixed;
-    display: none;
     bottom: 10%;
     right: 10%;
     margin-top: 70px;
     width: 350px;
-    height: 220px;
+    min-height: 100px;
     background: var(--main-green);
-    // box-shadow: 5px 5px rgba(87, 136, 71, 0.4);
-    border-radius: 100px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .contactCloudTitle {
+      font-size: 28px;
+      color: var(--main-white);
+      font-weight: bold;
+      margin: 10px 0px 20px 0px;
+    }
+
+    .contactWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 15px 0px;
+      color: var(--main-white);
+
+      p {
+        margin-left: 10px;
+      }
+    }
   }
 }

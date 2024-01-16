@@ -1,0 +1,23 @@
+.imageAutoSlider {
+  position: absolute;
+  top: -10vh;
+  right: 10%;
+  height: 600px;
+  object-fit: cover;
+  width: 450px;
+}
+
+@media screen and (max-width: 822px) {
+  .imageAutoSlider {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .imageAutoSlider {
+    width: 250px;
+    height: 400px;
+    right: 5%;
+  }
+}
